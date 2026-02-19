@@ -1,0 +1,53 @@
+-- database: ./database.db
+
+SELECT * FROM `BMW Motorbike Specs`
+ORDER BY `ModelTypeID` ASC;
+
+INSERT INTO `BMW Motorbike Specs` (ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice) VALUES 
+('S 1000 RR', 'High-performance superbike with ShiftCam technology and aerodynamic winglets for maximum track and road speed.', 2026, 'Water/oil-cooled 4-cylinder inline', 999, 205, 19895.00),
+('R 1300 RS', 'A versatile sport-tourer featuring the new 1300cc Boxer engine and Evo Paralever suspension for high-speed stability.', 2026, 'Air/liquid-cooled 2-cylinder Boxer', 1300, 145, 17095.00),
+('S 1000 XR', 'A "crossover" athlete that blends superbike performance with long-distance upright ergonomics and wind protection.', 2026, 'Water/oil-cooled 4-cylinder inline', 999, 170, 18825.00),
+('F 900 XR', 'An agile adventure-sport bike designed for mid-range touring and daily sport riding with accessible handling.', 2026, 'Water-cooled 2-cylinder inline', 895, 105, 12695.00);
+
+INSERT INTO `BMW Motorbike Specs` (ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice) VALUES 
+('M 1000 RR', 'Homologation special with 3.0 Carbon winglets, full titanium exhaust, and race-tuned ShiftCam engine.', 2026, 'Water/oil-cooled 4-cylinder inline', 999, 205, 35395.00),
+('M 1000 R', 'The ultimate naked hyper-roadster, delivering superbike performance in a minimalist, aggressive package.', 2026, 'Water/oil-cooled 4-cylinder inline', 999, 205, 22695.00),
+('M 1000 XR', 'High-performance crossover athlete designed for maximum sport performance on long-distance journeys.', 2026, 'Water/oil-cooled 4-cylinder inline', 999, 201, 25475.00);
+
+INSERT INTO `BMW Motorbike Specs` (ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice) VALUES 
+('K 1600 GT', 'Sport-oriented tourer with the legendary six-cylinder engine and agile handling.', 2026, '6-cylinder inline', 1649, 160, 24745.00),
+('K 1600 GTL', 'Luxury touring specialist with enhanced ergonomics and integrated topcase for two-up travel.', 2026, '6-cylinder inline', 1649, 160, 28855.00),
+('K 1600 B', 'A sleek, low-slung bagger designed for cruising with effortless six-cylinder power.', 2026, '6-cylinder inline', 1649, 160, 24975.00),
+('K 1600 Grand America', 'Full-dress luxury tourer based on the bagger platform, optimized for long-distance comfort.', 2026, '6-cylinder inline', 1649, 160, 28130.00),
+('R 1300 RT', 'Reimagined boxer tourer with 145 hp, lighter chassis, and advanced aerodynamic protection.', 2026, '2-cylinder Boxer', 1300, 145, 22495.00);
+
+INSERT INTO `BMW Motorbike Specs` (ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice) VALUES 
+('R 1300 R', 'Naked boxer punch with 145 hp and the new EVO Paralever suspension for aggressive handling.', 2026, '2-cylinder Boxer', 1300, 145, 16595.00),
+('S 1000 R', 'Hyper-naked roadster with a torque-optimized superbike engine and ultra-lightweight chassis.', 2026, '4-cylinder inline', 999, 170, 14695.00),
+('F 900 R', 'Dynamic mid-range naked bike with a focus on ergonomics and accessible performance technology.', 2026, '2-cylinder inline', 895, 105, 9495.00),
+('G 310 R', 'Lightweight urban roadster with a 180-degree reversed cylinder head for optimized center of gravity.', 2026, '1-cylinder', 313, 34, 5295.00);
+
+INSERT INTO `BMW Motorbike Specs` (ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice) VALUES 
+('R 18', 'Pure heritage cruiser with the 1802cc Big Boxer engine and open cardan shaft.', 2026, '2-cylinder Boxer', 1802, 91, 14995.00),
+('R 18 Classic', 'Nostalgic touring cruiser with removable windshield and soft bags.', 2026, '2-cylinder Boxer', 1802, 91, 17995.00),
+('R 18 Roctane', 'Custom bagger with blacked-out styling and a 21-inch front wheel.', 2026, '2-cylinder Boxer', 1802, 91, 18695.00),
+('R 18 B', 'High-tech bagger with a cockpit fairing and integrated hard cases.', 2026, '2-cylinder Boxer', 1802, 91, 19945.00),
+('R 18 Transcontinental', 'Luxury long-haul tourer with full luggage and Marshall audio system.', 2026, '2-cylinder Boxer', 1802, 91, 23995.00),
+('R 12 nineT', 'Classic high-performance roadster with premium aluminum finishes.', 2026, '2-cylinder Boxer', 1170, 109, 16295.00),
+('R 12', 'Cruiser-style heritage bike with a low seat height and relaxed geometry.', 2026, '2-cylinder Boxer', 1170, 95, 12345.00),
+('R 12 S', 'Premium retro-sport tribute to the R 90 S with standard cockpit fairing and Lava Orange livery.', 2026, '2-cylinder Boxer', 1170, 109, 21590.00),
+('R 12 G/S', 'Retro-inspired enduro paying homage to the original 1980 R 80 G/S.', 2026, '2-cylinder Boxer', 1170, 109, 16395.00);
+
+INSERT INTO `BMW Motorbike Specs` (ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice) VALUES 
+('R 1300 GS', 'High-tech flagship adventure bike with ShiftCam Boxer and EVO suspension.', 2026, '2-cylinder Boxer', 1300, 145, 21515.00),
+('R 1300 GS Adventure', 'Ultimate long-distance traveler with 7.9-gallon fuel capacity and rugged armor.', 2026, '2-cylinder Boxer', 1300, 145, 23645.00),
+('F 900 GS', 'Hardcore off-road enduro featuring 43mm USD forks and lightweight plastic tank.', 2026, '2-cylinder inline', 895, 105, 14275.00),
+('F 900 GS Adventure', 'Long-range mid-weight tourer with standard luggage rack and large windscreen.', 2026, '2-cylinder inline', 895, 105, 15195.00),
+('F 800 GS', 'Accessible GS for touring and light gravel, featuring an 895cc engine tuned for smooth delivery.', 2026, '2-cylinder inline', 895, 87, 10925.00),
+('F 450 GS', 'New lightweight two-cylinder GS delivering 48 hp for Spontaneous everyday adventures.', 2026, '2-cylinder inline', 420, 48, 7900.00),
+('G 310 GS', 'Compact urban adventurer with reverse-cylinder design and 19-inch front wheel.', 2026, '1-cylinder', 313, 34, 5895.00);
+
+INSERT INTO `BMW Motorbike Specs` (ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice) VALUES 
+('CE 04', 'Futuristic all-electric flagship scooter with 10.25-inch TFT and high-speed charging.', 2026, 'Electric', 0, 42, 12430.00),
+('CE 02', 'Compact electric eParkourer for urban agility, featuring a minimalist design.', 2026, 'Electric', 0, 15, 7599.00),
+('C 400 GT', 'Premium mid-size scooter with excellent wind protection and keyless ride.', 2026, '1-cylinder', 350, 34, 8245.00);
