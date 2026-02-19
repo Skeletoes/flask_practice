@@ -1,4 +1,4 @@
-from flask import Flask, g
+from flask import Flask, g, render_template
 import sqlite3
 
 DATABASE = 'database.db'
@@ -26,9 +26,9 @@ def query_db(query, args=(), one=False):
 @app.route('/')
 
 def home():
-    sql = "SELECT * FROM Motorbikes;"
+    sql = "SELECT ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes;"
     results = query_db(sql)
-    return str(results)
+    return render_template('home.html', results=results)
 
 if __name__ == '__main__':
     app.run(debug=True)
