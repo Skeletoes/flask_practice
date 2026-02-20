@@ -6,6 +6,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Ubuntu, sans-serif;}
   gap: 2em;
 }
 
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3em;
+}
+
 img {
     width: 100%;
     height: auto;

@@ -24,11 +24,16 @@ def query_db(query, args=(), one=False):
     return (rv[0] if rv else None) if one else rv
 
 @app.route('/')
-
 def home():
     sql = "SELECT ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes;"
     results = query_db(sql)
     return render_template('home.html', results=results)
+
+@app.route('/bike/<id>')
+def bike(id):
+    sql = "SELECT ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes WHERE ModelName = ?;"
+    result = query_db(sql, (id,), True)
+    return render_template('bike.html', bike=result)
 
 if __name__ == '__main__':
     app.run(debug=True)

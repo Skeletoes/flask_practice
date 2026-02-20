@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="two-column">
+    <img src="{{ bike[7] }}" alt="{{ bike[0] }}">
+
+    <div class="info">
+        <h1>{{ bike[0] }}</h1>
+        <p>{{ bike[1] }}</p>
+        <ul>
+            <li>Year: {{ bike[2] }}</li>
+            <li>Engine Type: {{ bike[3] }}</li>
+            <li>Displacement: {{ bike[4] }} cc</li>
+            <li>Horsepower: {{ bike[5] }} hp</li>
+            <li>Base Price: ${{ bike[6] }}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
