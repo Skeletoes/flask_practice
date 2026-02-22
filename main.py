@@ -25,15 +25,22 @@ def query_db(query, args=(), one=False):
 
 @app.route('/')
 def home():
-    sql = "SELECT ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes;"
+    sql = "SELECT ModelTypeID, ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes;"
     results = query_db(sql)
     return render_template('home.html', results=results)
 
 @app.route('/bike/<id>')
 def bike(id):
-    sql = "SELECT ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes WHERE ModelName = ?;"
+    sql = "SELECT ModelTypeID, ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes WHERE ModelName = ?;"
     result = query_db(sql, (id,), True)
     return render_template('bike.html', bike=result)
+
+@app.route('/specific-model/<modelID>')
+def specific_model(modelID):
+    sql = "SELECT ModelTypeID, ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes WHERE ModelTypeID = ?;"
+    models = query_db(sql, (modelID,), True)
+    return render_template('specific-model.html', model=models)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

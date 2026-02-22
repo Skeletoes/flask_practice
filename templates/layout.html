@@ -15,6 +15,13 @@
     </header>
     <nav class="w3-bar w3-blue-grey">
         <a href="/" class="w3-bar-item w3-button">Home</a>
+        <a href="{{ url_for('specific_model', modelID=0) }}" class="w3-bar-item w3-button">Sport</a>
+        <a href="{{ url_for('specific_model', modelID=1) }}" class="w3-bar-item w3-button">M</a>
+        <a href="{{ url_for('specific_model', modelID=2) }}" class="w3-bar-item w3-button">Tour</a>
+        <a href="{{ url_for('specific_model', modelID=3) }}" class="w3-bar-item w3-button">Roadster</a>
+        <a href="{{ url_for('specific_model', modelID=4) }}" class="w3-bar-item w3-button">Heritage</a>
+        <a href="{{ url_for('specific_model', modelID=5) }}" class="w3-bar-item w3-button">Adventure</a>
+        <a href="{{ url_for('specific_model', modelID=6) }}" class="w3-bar-item w3-button">Urban Mobility</a>
     </nav>
 
     {% block body %}
