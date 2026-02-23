@@ -45,4 +45,4 @@ def specific_model(modelID):
 
 if __name__ == '__main__':
     FlaskUI(app=app, server="flask", width=800, height=480, port=8000).run()
-    # app.run(debug=True)
+    app.run(debug=True)
