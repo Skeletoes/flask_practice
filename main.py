@@ -1,8 +1,18 @@
 from flask import Flask, g, render_template
 import sqlite3
+import sys
+import os
 from flaskwebgui import FlaskUI
 
-DATABASE = 'database.db'
+# Handle PyInstaller bundled database path
+if getattr(sys, 'frozen', False):
+    # Running as a bundled PyInstaller executable
+    database_dir = sys._MEIPASS
+else:
+    # Running as a normal Python script
+    database_dir = os.path.dirname(os.path.abspath(__file__))
+
+DATABASE = os.path.join(database_dir, 'database.db')
 
 app = Flask(__name__)
 
