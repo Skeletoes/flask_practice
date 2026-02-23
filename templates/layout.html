@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     <title>Home Page</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images\BMW-Logo.ico') }}">
 </head>
 <body class="w3-container">
     <header class="w3-container w3-padding-32">
-        <h1>BMW Motorrad</h1>
+        <a href="/" class="w3-bar-item w3-button">
+            <img src="https://tse1.mm.bing.net/th/id/OIP.vfJSSFZUa_YUhwH0JiQdDgHaBH?w=800&h=120&rs=1&pid=ImgDetMain&o=7&rm=3" alt="BMW Logo" class="logo" width = "50" height = "30">
+        </a>
     </header>
-    <nav class="w3-bar w3-blue-grey">
-        <a href="/" class="w3-bar-item w3-button">Home</a>
+    <nav class="w3-bar w3-blue">
         <a href="{{ url_for('specific_model', modelID=0) }}" class="w3-bar-item w3-button">Sport</a>
         <a href="{{ url_for('specific_model', modelID=1) }}" class="w3-bar-item w3-button">M</a>
         <a href="{{ url_for('specific_model', modelID=2) }}" class="w3-bar-item w3-button">Tour</a>

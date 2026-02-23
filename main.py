@@ -1,5 +1,6 @@
 from flask import Flask, g, render_template
 import sqlite3
+from flaskwebgui import FlaskUI
 
 DATABASE = 'database.db'
 
@@ -38,9 +39,10 @@ def bike(id):
 @app.route('/specific-model/<modelID>')
 def specific_model(modelID):
     sql = "SELECT ModelTypeID, ModelName, Description, Year, EngineType, Displacement, Horsepower, BasePrice, ImageURL FROM Motorbikes WHERE ModelTypeID = ?;"
-    models = query_db(sql, (modelID,), True)
+    models = query_db(sql, (modelID,))
     return render_template('specific-model.html', model=models)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    FlaskUI(app=app, server="flask", width=800, height=480, port=8000).run()
+    # app.run(debug=True)
